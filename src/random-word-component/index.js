@@ -33,8 +33,6 @@ export default class RandomWordComponent extends React.Component {
             var nextWord = randomWord(letters[letterIndex]);
             words.push(nextWord);
         }
-
-        console.log("words is", words);
         
         this.setState({
             words: words.map((w) => <h2 key={w}>{w}</h2>)
@@ -46,7 +44,7 @@ export default class RandomWordComponent extends React.Component {
 
         return (
             <div>
-                <h2><a href="#" class="App-link" onClick={this.makeWords}>REFRESH WORDS</a></h2>
+                <h2><a href="#" className="App-link" onClick={this.makeWords}>REFRESH WORDS</a></h2>
                 { this.state.words }
             </div>
         );

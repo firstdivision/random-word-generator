@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
+        <p className="App-Description">
           Written for a song prompt, this will generate four random english-language words
           with consecutive starting letters.  For example a, b, c, d.
         </p>

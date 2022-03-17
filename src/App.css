@@ -32,6 +32,13 @@ html {
   color: #61dafb;
 }
 
+.App-Description{
+  background-color: #353a44;
+  border : 1px solid #666;
+  margin : .3em;
+  padding: .6em;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
