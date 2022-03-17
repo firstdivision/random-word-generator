@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/random-word-generator/static/css/main.6fbb629b.css",
-    "main.js": "/random-word-generator/static/js/main.5a286741.js",
+    "main.css": "/random-word-generator/static/css/main.dcff6446.css",
+    "main.js": "/random-word-generator/static/js/main.a40182a4.js",
     "static/js/787.8e0a75a0.chunk.js": "/random-word-generator/static/js/787.8e0a75a0.chunk.js",
     "static/media/logo.svg": "/random-word-generator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/random-word-generator/index.html",
-    "main.6fbb629b.css.map": "/random-word-generator/static/css/main.6fbb629b.css.map",
-    "main.5a286741.js.map": "/random-word-generator/static/js/main.5a286741.js.map",
+    "main.dcff6446.css.map": "/random-word-generator/static/css/main.dcff6446.css.map",
+    "main.a40182a4.js.map": "/random-word-generator/static/js/main.a40182a4.js.map",
     "787.8e0a75a0.chunk.js.map": "/random-word-generator/static/js/787.8e0a75a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6fbb629b.css",
-    "static/js/main.5a286741.js"
+    "static/css/main.dcff6446.css",
+    "static/js/main.a40182a4.js"
   ]
 }
