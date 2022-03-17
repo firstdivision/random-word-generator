@@ -4,10 +4,9 @@ import './App.css';
 import randomWord from './random-word-by-letter'
 
 
-function App() {
-
-
-
+function makeWords()
+{
+  
   var letters = 
   ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
    'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
@@ -19,18 +18,35 @@ function App() {
   
   for (let index = 0; index < 4; index++) {
     let letterIndex = startIx + index;
-    console.log("getting letter index: " + letterIndex);
     var nextWord = randomWord(letters[letterIndex]);
-    console.log("Found next word: " + nextWord);
     words.push(nextWord);
   }
 
-  const listItems = words.map((w) =>    <h3 key={w}>{w}</h3>  );
+  console.log("words is", words);
+  return words.map((w) =>    <h3 key={w}>{w}</h3>  );
+
+}
+
+function refresh(){
+  console.log("refreshing");
+  words = makeWords();
+}
+
+let words;
+
+function App() {
+
+  refresh();
 
   return (
     <div className="App">
       <header className="App-header">
-        { listItems }
+        <div>
+        <button onClick={refresh}>  
+          Refresh
+        </button>
+        </div>
+          { words }
       </header>
     </div>
   );
