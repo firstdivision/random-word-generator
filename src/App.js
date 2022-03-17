@@ -1,22 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
 
+import randomWord from './random-word-by-letter'
+
+
 function App() {
+
+
+
+  var letters = 
+  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
+   'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
+   'u', 'v', 'w', 'x', 'y', 'z'];
+
+  var startIx = Math.floor(Math.random() * (letters.length - 1 - 3)); //cannot start after 22 since we need the also get the next 3
+  
+  console.log("startIx=" + startIx);
+  var startLetter = letters[startIx];
+  var words = [];
+
+  words.push(randomWord(letters[startIx]))
+  for (let index = 0; index < 3; index++) {
+    let letterIndex = startIx + 1 + index;
+    console.log("getting letter index: " + letterIndex);
+    var nextWord = randomWord(letters[letterIndex]);
+    console.log("Found next word: " + nextWord);
+    words.push(nextWord);
+  }
+
+  const listItems = words.map((w) =>    <h3 key={w}>{w}</h3>  );
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        { listItems }
       </header>
     </div>
   );
