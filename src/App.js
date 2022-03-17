@@ -14,14 +14,11 @@ function App() {
    'u', 'v', 'w', 'x', 'y', 'z'];
 
   var startIx = Math.floor(Math.random() * (letters.length - 1 - 3)); //cannot start after 22 since we need the also get the next 3
-  
-  console.log("startIx=" + startIx);
-  var startLetter = letters[startIx];
   var words = [];
 
-  words.push(randomWord(letters[startIx]))
-  for (let index = 0; index < 3; index++) {
-    let letterIndex = startIx + 1 + index;
+  
+  for (let index = 0; index < 4; index++) {
+    let letterIndex = startIx + index;
     console.log("getting letter index: " + letterIndex);
     var nextWord = randomWord(letters[letterIndex]);
     console.log("Found next word: " + nextWord);
