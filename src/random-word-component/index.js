@@ -31,7 +31,7 @@ export default class RandomWordComponent extends React.Component {
         for (let index = 0; index < 4; index++) {
             let letterIndex = startIx + index;
             var nextWord = randomWord(letters[letterIndex]);
-            words.push(nextWord);
+            words.push(nextWord.toUpperCase());
         }
         
         this.setState({
